@@ -2,10 +2,10 @@ const path=require('path')
 const express=require('express')
 const http=require('http')
 const socketio=require('socket.io')
-const { generateMessage,generateLocationMessage,generateAudioMessage} = require('./utils/messages')
-const {addUser,removeUser,getUser,getUsersInRoom}=require('./utils/users')
+const { generateMessage,generateLocationMessage,generateAudioMessage} = require('./src/utils/messages')
+const {addUser,removeUser,getUser,getUsersInRoom}=require('./src/utils/users')
 
-const publicDir =path.join(__dirname,'../public')
+const publicDir =path.join(__dirname,'/public')
 const port =process.env.PORT || 3000
 const app=express()
 const server=http.createServer(app)
