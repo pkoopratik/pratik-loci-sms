@@ -5,7 +5,7 @@ const socketio=require('socket.io')
 const { generateMessage,generateLocationMessage,generateAudioMessage} = require('./src/utils/messages')
 const {addUser,removeUser,getUser,getUsersInRoom}=require('./src/utils/users')
 
-const publicDir =path.join(__dirname,'/public')
+const publicDir =path.join(__dirname,'./public')
 const port =process.env.PORT || 3000
 const app=express()
 const server=http.createServer(app)
@@ -14,6 +14,9 @@ const io =socketio(server)
 app.use(express.static(publicDir))
 
 app.get('/',(req,res)=>{
+    res.render('index')
+})
+app.get('',(req,res)=>{
     res.render('index')
 })
 
