@@ -13,7 +13,7 @@ const io =socketio(server)
 
 app.use(express.static(publicDir))
 
-app.get('',(req,res)=>{
+app.get('/',(req,res)=>{
     res.render('index')
 })
 
