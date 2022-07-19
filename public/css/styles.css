@@ -16,6 +16,7 @@ html {
 }
 
 input {
+    background-color: #cfc3e9;
     font-size: 14px;
 }
 
@@ -37,7 +38,7 @@ label {
     display: block;
     font-size: 14px;
     margin-bottom: 8px;
-    color: #777;
+    color: rgb(24, 23, 23);
 }
 
 input {
