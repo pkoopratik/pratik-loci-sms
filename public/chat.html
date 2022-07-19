@@ -12,7 +12,7 @@
 
             </div>
             <div class="chat__main">
-                <h1>Chat-App</h1>
+                <h1>Loci-SMS</h1>
                 <!-- <header>Chat-App</header> -->
                 <div id="messages" class="chat__messages"></div>
                 <div class="compose">
@@ -21,6 +21,8 @@
                         <select id="secs" name="destructIn"></select>
                         <button>Send</button>
                     </form>
+
+                    
                     <div><button id="send-location">Send Location</button></div>
                     <div><button id="record-audio">Record</button></div>
                 </div>
@@ -34,7 +36,7 @@
                     <span class="message__name">{{username}}</span>
                     <span class="message__meta">{{time}}</span>
                 </p>
-                <p>{{message}}</p>
+                <p >{{message}}</p>
             </div>
         </script>
 
@@ -65,9 +67,10 @@
             <h3 class="list-title" >Users</h3>
             <ul class="users">
                 {{#users}}
-                    <li>{{username}}</li>
+                    <li style="    border:3px solid #6b47b8; padding-left: 10px; margin-top: 10px; background-color: #5a627e; ">{{username}}</li>
                 {{/users}}
             </ul>
+            
         </script>
 
 
@@ -88,6 +91,16 @@
                 }
                 document.getElementById("secs").selectedIndex = "0";
             };
+
+            window.onkeypress = function () {
+                //Reference the DropDownList.
+                //document.getElementById( 'bottom' ).scrollIntoView();
+                            window.scrollTo(0, document.getElementById("messages").scrollHeight);
+
+               
+            };
+            //window.scrollTo(0, document.body.scrollHeight);
+
         </script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
